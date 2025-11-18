@@ -1,5 +1,5 @@
 {
-  "name": "script-name",
+  "name": "jav-nav",
   "version": "0.1.0",
   "description": "",
   "private": true,
@@ -19,19 +19,21 @@
     "preview": "vite preview",
     "ci": "biome ci",
     "lint": "biome lint --write",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "dep": "ncu -i --format group"
   },
   "dependencies": {
+    "@ant-design/cssinjs": "^1.24.0",
     "@ant-design/icons": "^6.1.0",
     "@ant-design/v5-patch-for-react-19": "^1.0.3",
-    "antd": "^5.29.0",
+    "antd": "^5.29.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.6",
     "@types/node": "^24.10.1",
-    "@types/react": "^19.2.5",
+    "@types/react": "^19.2.6",
     "@types/react-dom": "^19.2.3",
     "@types/tampermonkey": "^5.0.5",
     "@vitejs/plugin-react-swc": "^4.2.2",

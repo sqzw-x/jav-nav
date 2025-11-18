@@ -17,15 +17,13 @@ export default defineConfig({
     monkey({
       entry: "src/userscript.tsx",
       userscript: {
-        // namespace: "https://github.com/sqzw-x",
+        namespace: "https://github.com/sqzw-x",
         match: ["https://*/*", "http://*/*"],
       },
       build: {
         externalGlobals: {},
       },
-      server: {
-        mountGmApi: false,
-      },
+      server: {},
     }),
   ],
 });
