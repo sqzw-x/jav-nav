@@ -42,14 +42,6 @@ export const uiPositionLabelMap = createLabelMap([
 
 export type UiPosition = LabelMapKeys<typeof uiPositionLabelMap>;
 
-export const uiComponentLabelMap = createLabelMap([
-  ["list", "list"],
-  ["dropdown", "dropdown"],
-  ["floating-panel", "floating-panel"],
-] as const);
-
-export type UiComponent = LabelMapKeys<typeof uiComponentLabelMap>;
-
 export type UrlMatcher = {
   id: string;
   pattern: string;

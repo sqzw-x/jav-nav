@@ -19,7 +19,6 @@ import {
   guardTypeLabelMap,
   matchScopeLabelMap,
   type SiteRule,
-  uiComponentLabelMap,
   uiPositionLabelMap,
 } from "@/rules/types";
 
@@ -37,12 +36,8 @@ export type RuleEditorDrawerProps = {
 
 const normalizeRule = (values: SiteRule): SiteRule => ({
   ...values,
-  keywords: values.keywords ?? [],
-  matchers: values.matchers ?? [],
   detailPageGuards: values.detailPageGuards ?? [],
-  identifierExtractors: values.identifierExtractors ?? [],
   entryPoints: values.entryPoints ?? [],
-  uiPlacement: values.uiPlacement ?? { anchor: "body", position: "append", component: "floating-panel" },
 });
 
 const RuleEditorDrawer = ({ open, rule, onSubmit, onClose, portalContainer }: RuleEditorDrawerProps) => {
@@ -361,17 +356,6 @@ const RuleEditorDrawer = ({ open, rule, onSubmit, onClose, portalContainer }: Ru
             <Select
               style={{ width: 180 }}
               options={Array.from(uiPositionLabelMap, ([value, label]) => ({ value, label }))}
-            />
-          </Form.Item>
-          <Form.Item
-            label="组件样式"
-            name={["uiPlacement", "component"]}
-            initialValue="floating-panel"
-            extra="选择面板的展示形态"
-          >
-            <Select
-              style={{ width: 180 }}
-              options={Array.from(uiComponentLabelMap, ([value, label]) => ({ value, label }))}
             />
           </Form.Item>
         </Space>

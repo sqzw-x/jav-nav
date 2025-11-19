@@ -102,7 +102,6 @@ type SiteRule = {
 
 - `anchor`: CSS 选择器或 `body` 默认。
 - `position`: `before`, `after`, `append`, `prepend`, 或 `floating`。
-- `component`: `list`, `dropdown`, `floating-panel` 等预设样式。
 - `styleOverrides`: 自定义 class 或行内样式。
 
 ## 匹配与执行流程
