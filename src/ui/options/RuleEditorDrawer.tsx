@@ -36,7 +36,9 @@ export type RuleEditorDrawerProps = {
 
 const normalizeRule = (values: SiteRule): SiteRule => ({
   ...values,
+  matchers: values.matchers ?? [],
   detailPageGuards: values.detailPageGuards ?? [],
+  identifierExtractors: values.identifierExtractors ?? [],
   entryPoints: values.entryPoints ?? [],
 });
 
