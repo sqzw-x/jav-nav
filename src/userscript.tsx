@@ -1,4 +1,5 @@
 import { GM_registerMenuCommand } from "vite-plugin-monkey/dist/client";
+
 import { RuleEngine } from "./engine";
 import { SiteRuleStore } from "./rules/store";
 import { LinksRenderer } from "./ui/LinksRenderer";

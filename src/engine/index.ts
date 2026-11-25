@@ -1,5 +1,6 @@
 import type { IdentifierRegistry, SiteRule } from "@/rules/types";
 import { createLogger } from "@/utils/logger";
+
 import { RuleExecutionContext } from "./context";
 import { runExtractors } from "./extractors";
 import { guardsPass } from "./guards";

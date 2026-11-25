@@ -1,4 +1,5 @@
 import { GM_getValue, GM_setValue } from "vite-plugin-monkey/dist/client";
+
 import { createDefaultSiteRules } from "./defaultRules";
 import type { SiteRule } from "./types";
 import { validateRules } from "./validate";

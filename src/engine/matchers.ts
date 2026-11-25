@@ -1,5 +1,6 @@
 import type { SiteRule, UrlMatcher } from "@/rules/types";
 import { createLogger } from "@/utils/logger";
+
 import type { RuleExecutionContext } from "./context";
 
 const logger = createLogger("matcher");

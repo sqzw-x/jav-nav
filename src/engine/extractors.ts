@@ -1,6 +1,7 @@
 import type { Extractor, IdentifierRegistry, IdentifierValue } from "@/rules/types";
 import { createLogger } from "@/utils/logger";
 import { applyPattern } from "@/utils/regex";
+
 import type { RuleExecutionContext } from "./context";
 
 const logger = createLogger("extractor");

@@ -10,9 +10,11 @@ import {
 } from "@ant-design/icons";
 import { App, Button, Card, Input, Modal, Space, Spin, Switch, Tag, Typography } from "antd";
 import { useCallback, useEffect, useState } from "react";
+
 import { createDefaultSiteRules } from "@/rules/defaultRules";
 import type { SiteRuleStore } from "@/rules/store";
 import type { SiteRule } from "@/rules/types";
+
 import RuleEditorDrawer from "./RuleEditorDrawer";
 
 const { Text } = Typography;
@@ -138,6 +140,7 @@ const OptionsApp = ({ store, onClose, onRulesUpdated, overlayContainer }: Option
   }, [message, store]);
 
   useEffect(() => {
+    // oxlint-disable-next-line react-hooks/set-state-in-effect
     void loadRules();
   }, [loadRules]);
 

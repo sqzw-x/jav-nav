@@ -12,12 +12,12 @@ export const observeSpaNavigation = (callback: Callback) => {
   const originalPushState = window.history.pushState;
   const originalReplaceState = window.history.replaceState;
 
-  window.history.pushState = function pushState(...args) {
+  window.history.pushState = function pushState(this: History, ...args) {
     originalPushState.apply(this, args);
     Promise.resolve().then(notify);
   } as History["pushState"];
 
-  window.history.replaceState = function replaceState(...args) {
+  window.history.replaceState = function replaceState(this: History, ...args) {
     originalReplaceState.apply(this, args);
     Promise.resolve().then(notify);
   } as History["replaceState"];

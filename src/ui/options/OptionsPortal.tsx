@@ -1,11 +1,14 @@
 import { StyleProvider } from "@ant-design/cssinjs";
 import { App as AntApp, ConfigProvider } from "antd";
-import resetCss from "antd/dist/reset.css?inline";
 import type { Root } from "react-dom/client";
 import { createRoot } from "react-dom/client";
+
 import type { SiteRuleStore } from "@/rules/store";
 import type { SiteRule } from "@/rules/types";
+
 import OptionsApp from "./OptionsApp";
+
+import resetCss from "antd/dist/reset.css?inline";
 
 export type OptionsPortalDeps = {
   store: SiteRuleStore;
